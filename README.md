@@ -3,7 +3,7 @@
   <br>
 </p>
 <div align=center>
-    <a href="#desc">Descrição</a> | <a href="#prerequisites">Pré Requisitos</a> | <a href="#running">Rodando</a> | <a href="#resultados">Resultados</a> | <a href="#contribuidores">Contribuidores</a> 
+    <a href="#desc">Descrição</a> | <a href="#prerequisites">Pré Requisitos</a> | <a href="#running">Rodando</a> | <a href="#resultados">Resultados</a> | <a href="#contribuidores">Contribuidores</a>
 </div>
 <br>
 <hr>
@@ -11,7 +11,7 @@
     Descrição
 </h2>
 
-Circuitos Combinacionais | Trabalho pratico pra disciplina de Introdução aos Sistemas Lógicos - UFV
+Circuitos Combinacionais | Segundo Trabalho pratico pra disciplina de Introdução aos Sistemas Lógicos - UFV
 - - - -
 
 <h2 id="prerequisites">
@@ -40,7 +40,7 @@ Para abrir o GTKWave interativo:
 ```
 gtkwave
 ```
-Logo após selecione o arquivo com a extensão .vcd para executar 
+Logo após selecione o arquivo com a extensão .vcd para executar
 
 - - - -
 <h2 id="resultados">
