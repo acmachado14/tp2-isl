@@ -19,7 +19,7 @@ module Circuito (a, b, c, d, reset, tb_b8, tb_b7, tb_b6, tb_b5, tb_b4, tb_b3, tb
                 if (estadoAtual == 4'b0000 || estadoAtual == 4'b0010) begin // for igual a 0 ou 2
                     estadoAtual = 4'b0001; //1
                 end else begin
-                    estadoAtual = 4'b1001; //7
+                    estadoAtual = 4'b1000; //7
                     finalizado = 1'b1;
                 end
             end
@@ -27,7 +27,7 @@ module Circuito (a, b, c, d, reset, tb_b8, tb_b7, tb_b6, tb_b5, tb_b4, tb_b3, tb
                 if (estadoAtual == 4'b0000 || estadoAtual == 4'b0001 || estadoAtual == 4'b0011) begin // for igual a 0 ou 1 ou 3
                     estadoAtual = 4'b0010; //2
                 end else begin
-                    estadoAtual = 4'b1001; //7
+                    estadoAtual = 4'b1000; //7
                     finalizado = 1'b1;
                 end
             end
@@ -35,7 +35,7 @@ module Circuito (a, b, c, d, reset, tb_b8, tb_b7, tb_b6, tb_b5, tb_b4, tb_b3, tb
                 if (estadoAtual == 4'b0000 || estadoAtual == 4'b0010 || estadoAtual == 4'b0100) begin // for igual a 0 ou 2 ou 4
                     estadoAtual = 4'b0011; //3
                 end else begin
-                    estadoAtual = 4'b1001; //7
+                    estadoAtual = 4'b1000; //7
                     finalizado = 1'b1;
                 end
             end
@@ -43,7 +43,7 @@ module Circuito (a, b, c, d, reset, tb_b8, tb_b7, tb_b6, tb_b5, tb_b4, tb_b3, tb
                 if (estadoAtual == 4'b0000 || estadoAtual == 4'b0011 || estadoAtual == 4'b0101) begin // for igual a 0 ou 3 ou 5
                     estadoAtual = 4'b0100; //4
                 end else begin
-                    estadoAtual = 4'b1001; //7
+                    estadoAtual = 4'b1000; //7
                     finalizado = 1'b1;
                 end
             end
@@ -51,21 +51,24 @@ module Circuito (a, b, c, d, reset, tb_b8, tb_b7, tb_b6, tb_b5, tb_b4, tb_b3, tb
                 if (estadoAtual == 4'b0000 || estadoAtual == 4'b0100) begin // for igual a 0 ou 4
                     estadoAtual = 4'b0101; //5
                 end else begin
-                    estadoAtual = 4'b1001; //7
+                    estadoAtual = 4'b1000; //7
                     finalizado = 1'b1;
                 end
             end
-            if ( entrada == 7'b0110010) begin
+            // nao pode ser igual ao 0, 7 e 8
+            if ( entrada == 7'b0110010 && estadoAtual != 4'b0000 && estadoAtual != 4'b1000 && estadoAtual != 4'b1010) begin
                 if (estadoAtual == 4'b0001 || estadoAtual == 4'b0010 || estadoAtual == 4'b0011) begin // for igual 1 ou 2 ou 3
-                    estadoAtual = 4'b1000; //6
+                    estadoAtual = 4'b1001; //6
                     finalizado = 1'b1;
                 end
             end
-            if ( entrada == 7'b0010110) begin
-                estadoAtual = 4'b1001; //7
+            // nao pode ser igual ao 0, 6 e 8
+            if ( entrada == 7'b0010110 && estadoAtual != 4'b0000 && estadoAtual != 4'b1001 && estadoAtual != 4'b1010) begin
+                estadoAtual = 4'b1000; //7
                 finalizado = 1'b1;
             end
-            if ( entrada == 7'b0100011 && estadoAtual != 4'b0000) begin
+            // nao pode ser igual ao 0, 6 e 7
+            if ( entrada == 7'b0100011 && estadoAtual != 4'b0000 && estadoAtual != 4'b1001 && estadoAtual != 4'b1000) begin
                 if (estadoAtual == 4'b0100 || estadoAtual == 4'b0101) begin // for igual 4 ou 5
                     estadoAtual = 4'b1010; //8
                     finalizado = 1'b1;
