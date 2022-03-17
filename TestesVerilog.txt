@@ -1,0 +1,194 @@
+----------------------------------------------------REFERENCIA-------------------------------------------------------------------
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0001 -1
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0100 -4
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //0101 -5
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 1;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 0; #1 //1001 -6
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 0; tb_b3 = 1; tb_b2 = 1; tb_b1 = 0; #1 //1000 -7
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //1010 -8
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+PASSOU!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0001 -1 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0100 -4 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3 Retorna
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2 Retorna
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 1;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 0; #1 //1001 -6 Certo vai pro 6
+
+Entrada = 11011000 | Estado Atual = 0001
+Entrada = 11101011 | Estado Atual = 0010
+Entrada = 11001111 | Estado Atual = 0011
+Entrada = 10101000 | Estado Atual = 0100
+Entrada = 11001111 | Estado Atual = 0011
+Entrada = 11101011 | Estado Atual = 0010
+Entrada = 10110010 | Estado Atual = 1001
+
+-------------------------------------------------------------------------------------------------------------------------------
+PASSOU!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0100 -4 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //0101 -5 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 1;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 0; #1 //1000 -6 Erro vai pro 7
+
+Entrada = 10101000 | Estado Atual = 0100
+Entrada = 10001100 | Estado Atual = 0101
+Entrada = 10110010 | Estado Atual = 1000
+-------------------------------------------------------------------------------------------------------------------------------
+PASSOU!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //1000 -8 Erro vai pro 7
+
+Entrada = 11101011 | Estado Atual = 0010
+Entrada = 11001111 | Estado Atual = 0011
+Entrada = 10100011 | Estado Atual = 1000
+
+-------------------------------------------------------------------------------------------------------------------------------
+PASSOU!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0001 -1 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0100 -4 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //0101 -5 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0100 -4 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0001 -1 Avança
+
+Entrada = 11011000 | Estado Atual = 0001
+Entrada = 11101011 | Estado Atual = 0010
+Entrada = 11001111 | Estado Atual = 0011
+Entrada = 10101000 | Estado Atual = 0100
+Entrada = 10001100 | Estado Atual = 0101
+Entrada = 10101000 | Estado Atual = 0100
+Entrada = 11001111 | Estado Atual = 0011
+Entrada = 11101011 | Estado Atual = 0010
+Entrada = 11011000 | Estado Atual = 0001
+-------------------------------------------------------------------------------------------------------------------------------
+
+//Testes unitários
+
+// 1-
+APROVADO!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0001 -1 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //1000 -3 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0001 -1 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //1000 -4 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0001 -1 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //1000 -5 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0001 -1
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1; //1000 -8 Erro vai pro 7
+
+Entrada = 11011000 | Estado Atual = 0001
+Entrada = 11001111 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 11011000 | Estado Atual = 0001
+Entrada = 10101000 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 11011000 | Estado Atual = 0001
+Entrada = 10001100 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 11011000 | Estado Atual = 0001
+Entrada = 10100011 | Estado Atual = 1000
+-------------------------------------------------------------------------------------------------------------------------------
+// 2-
+APROVADO!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //1000 -4 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //1000 -5 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //0010 -2 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1; //1000 -8 Erro vai pro 7
+
+Entrada = 11101011 | Estado Atual = 0010
+Entrada = 10101000 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 11101011 | Estado Atual = 0010
+Entrada = 10001100 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 11101011 | Estado Atual = 0010
+Entrada = 10100011 | Estado Atual = 1000
+-------------------------------------------------------------------------------------------------------------------------------
+// 3-
+PASSOU!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //1000 -1 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //1000 -5 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0011 -3 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1; //1000 -8 Erro vai pro 7
+
+Entrada = 11001111 | Estado Atual = 0011
+Entrada = 11011000 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 11001111 | Estado Atual = 0011
+Entrada = 10001100 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 11001111 | Estado Atual = 0011
+Entrada = 10100011 | Estado Atual = 1000
+-------------------------------------------------------------------------------------------------------------------------------
+// 4-
+PASSOU!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0100 -4 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //1000 -1 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0100 -4 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //1000 -2 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //0100 -4 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 1;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 0; #1; //1000 -6 Erro vai pro 7
+
+Entrada = 10101000 | Estado Atual = 0100
+Entrada = 11011000 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 10101000 | Estado Atual = 0100
+Entrada = 11101011 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 10101000 | Estado Atual = 0100
+Entrada = 10110010 | Estado Atual = 1000
+-------------------------------------------------------------------------------------------------------------------------------
+// 5-
+PASSOU!
+
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //0101 -5 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 1;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 0; tb_b1 = 0; #1 //1000 -1 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //0101 -5 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 1; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 0; tb_b2 = 1; tb_b1 = 1; #1 //1000 -2 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //0101 -5 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //1000 -3 Erro vai pro 7
+reset = 1; tb_b8 = 1;  tb_b7 = 1; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 1; tb_b1 = 1; #1 //0000 -0 Reset
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 0; tb_b5 = 0;  tb_b4 = 1; tb_b3 = 1; tb_b2 = 0; tb_b1 = 0; #1 //0101 -5 Avança
+reset = 0; tb_b8 = 1;  tb_b7 = 0; tb_b6 = 1; tb_b5 = 1;  tb_b4 = 0; tb_b3 = 0; tb_b2 = 1; tb_b1 = 0; #1; //1000 -6 Erro vai pro 7
+
+Entrada = 10001100 | Estado Atual = 0101
+Entrada = 11011000 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 10001100 | Estado Atual = 0101
+Entrada = 11101011 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 10001100 | Estado Atual = 0101
+Entrada = 11001111 | Estado Atual = 1000
+Entrada = 11001111 | Estado Atual = 0000
+Entrada = 10001100 | Estado Atual = 0101
+Entrada = 10110010 | Estado Atual = 1000
+-------------------------------------------------------------------------------------------------------------------------------
