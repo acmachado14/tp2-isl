@@ -34,20 +34,10 @@ iverilog -o run.vvp circuito_tb.v
 ```
 vvp run.vvp
 ```
-
-Para abrir o GTKWave interativo:
-
-```
-gtkwave
-```
-Logo após selecione o arquivo com a extensão .vcd para executar
-
 - - - -
 <h2 id="resultados">
     Resultados
 </h2>
-
-<img src="images/gtkwave.JPG">
 
 <img src="images/terminal.JPG">
 
